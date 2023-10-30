@@ -1,0 +1,13 @@
+def print_currency_denominations(amount):
+    denominations = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+    remaining_amount = amount
+
+    print(f"Currency denominations for {amount} are:")
+
+    for denomination in denominations:
+        count = remaining_amount 
+        if count > 0:
+            print(f"{count} x {denomination} notes")
+            remaining_amount %= denomination
+amount_to_check = 2865
+print_currency_denominations(amount_to_check)
